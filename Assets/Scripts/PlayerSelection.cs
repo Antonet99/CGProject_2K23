@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class PlayerSelection : MonoBehaviour
 {
     [SerializeField]
-    public GameObject avatar;
+    public GameObject avatar, selection,gamenvrionment,background;
     private int avatarSelected=0;
     public GameObject[] avatarModels;
     private Animator animator;
     public RuntimeAnimatorController[] animatorController;
     public Avatar[] avatarAnimation;
+    public bool isBlocking;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +82,7 @@ public class PlayerSelection : MonoBehaviour
         thisModel.transform.parent = transform;
         thisModel.transform.localScale=new Vector3(0.46f,0.46f,0.46f);
         avatar = thisModel;
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
          // Set the animator controller
         animator.runtimeAnimatorController = animatorController[avatarSelected];
         // Set the avatar for animation
@@ -95,9 +97,17 @@ public class PlayerSelection : MonoBehaviour
     {
         PlayerPrefs.SetInt("avatarSelected", avatarSelected);
     }
-    public void ChangeScene(int sceneID)
+    public void StartPlaying()
     {
-        SceneManager.LoadScene(sceneID);
+       selection.SetActive(false);
+       gamenvrionment.SetActive(true);
+       background.SetActive(false);
+
     }    
+    [ContextMenu("Punch!")]
+    public void Punching()
+    {
+        animator.SetTrigger("Punching");
+    }
 }
 
