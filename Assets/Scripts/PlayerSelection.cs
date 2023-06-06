@@ -10,7 +10,6 @@ public class PlayerSelection : MonoBehaviour
     public RuntimeAnimatorController[] animatorController;
     public Avatar[] avatarAnimation;
     public bool isBlocking, isWinner;
-    public SfxManager sfxManager;
     
 
     //Start is called before the first frame update
@@ -80,13 +79,11 @@ public class PlayerSelection : MonoBehaviour
     public void Punching()
     {
         animator.SetTrigger("Punching");
-        sfxManager.FemalePunch();
     }
     [ContextMenu("Kick!")]
     public void Kicking()
     {
         animator.SetTrigger("Kicking");
-        sfxManager.FemaleKick();
     }
     [ContextMenu("Block!")]
     public void Blocking()
@@ -99,7 +96,6 @@ public class PlayerSelection : MonoBehaviour
     {
         isWinner=!isWinner;
         animator.SetBool("Winning", isWinner);
-        sfxManager.FemaleWinning();
     }
 }
 

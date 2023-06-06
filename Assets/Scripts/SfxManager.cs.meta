@@ -4,12 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - femalepunch: {fileID: 8300000, guid: b2df2f59f9f69ba459e9e1fb949b77f4, type: 3}
-  - femalekick: {fileID: 8300000, guid: a0a80945d91f33b46bccc2ff8187ee12, type: 3}
-  - femalewinning: {fileID: 8300000, guid: 4a5b28c5ca1db8146bb10b8a3e8219b8, type: 3}
-  - malepunch: {instanceID: 0}
-  - malekick: {instanceID: 0}
-  - malewinning: {instanceID: 0}
+  - clip: {fileID: 8300000, guid: b2df2f59f9f69ba459e9e1fb949b77f4, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
