@@ -1537,7 +1537,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 497308618}
   selection: {fileID: 881238565}
   options: {fileID: 673808617}
-  avatar: {fileID: 0}
+  avatar: {fileID: 2120836022}
 --- !u!1 &681746664
 GameObject:
   m_ObjectHideFlags: 0
