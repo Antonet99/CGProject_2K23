@@ -9,15 +9,23 @@ public class PlayerSelection : MonoBehaviour
     private Animator animator;
     public RuntimeAnimatorController[] animatorController;
     public Avatar[] avatarAnimation;
-    public bool isBlocking;
+    public bool isBlocking, isWinner;
+    public SfxManager sfxManager;
     
 
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
+        isBlocking=false;
+        isWinner=false;
         int avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
         avatar=Instantiate(avatarModels[avatarSelected],transform.position,transform.rotation) as GameObject;
         UpdateAvatar(avatarSelected);
+    }
+    //Update is called every frame, if the MonoBehaviour is enabled.
+    void Update()
+    {
+        
     }
     
     //Function to go to the next avatar (called when pressing next button)
@@ -37,9 +45,9 @@ public class PlayerSelection : MonoBehaviour
     {
         avatarSelected--;
         //check if we have reached the end of the avatar array
-        if (avatarSelected <= 0)
+        if (avatarSelected < 0)
         {
-            avatarSelected = avatarModels.Length;
+            avatarSelected = avatarModels.Length-1;
         }
         UpdateAvatar(avatarSelected);
         Save();
@@ -72,6 +80,26 @@ public class PlayerSelection : MonoBehaviour
     public void Punching()
     {
         animator.SetTrigger("Punching");
+        sfxManager.FemalePunch();
+    }
+    [ContextMenu("Kick!")]
+    public void Kicking()
+    {
+        animator.SetTrigger("Kicking");
+        sfxManager.FemaleKick();
+    }
+    [ContextMenu("Block!")]
+    public void Blocking()
+    {
+        isBlocking=!isBlocking;
+        animator.SetBool("Blocking", isBlocking);
+    }
+    [ContextMenu("Winner!")]
+    public void Winning()
+    {
+        isWinner=!isWinner;
+        animator.SetBool("Winning", isWinner);
+        sfxManager.FemaleWinning();
     }
 }
 
