@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerSelection : MonoBehaviour
 {
     [SerializeField]
-    public GameObject avatar, selection,gamenvrionment,background;
+    public GameObject avatar,enemy, selection,gamenvrionment,background;
     private int avatarSelected=0;
     public GameObject[] avatarModels;
     private Animator animator;
@@ -72,7 +72,10 @@ public class PlayerSelection : MonoBehaviour
     {
        selection.SetActive(false);
        gamenvrionment.SetActive(true);
+       enemy.SetActive(true);
        background.SetActive(false);
+       avatar.transform.position=avatar.transform.position+new Vector3(-5,0,0);
+       avatar.transform.rotation=Quaternion.Euler(0,75,0);
 
     }    
     [ContextMenu("Punch!")]
