@@ -6,9 +6,11 @@ public class PlayerSelection : MonoBehaviour
     public GameObject avatar,enemy, selection,gamenvrionment,background;
     private int avatarSelected=0;
     public GameObject[] avatarModels;
-    private Animator animator;
+    private Animator animator, enemyAnimator;
     public RuntimeAnimatorController[] animatorController;
+    //public RuntimeAnimatorController enemyController;
     public Avatar[] avatarAnimation;
+    //public Avatar enemyAnimationAvatar;
     public bool isBlocking, isWinner;
     
 
@@ -20,6 +22,9 @@ public class PlayerSelection : MonoBehaviour
         int avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
         avatar=Instantiate(avatarModels[avatarSelected],transform.position,transform.rotation) as GameObject;
         UpdateAvatar(avatarSelected);
+        //enemyAnimator.runtimeAnimatorController=enemyController;
+        //enemyAnimator.avatar=enemyAnimationAvatar;
+        enemyAnimator=enemy.GetComponent<Animator>();
     }
     //Update is called every frame, if the MonoBehaviour is enabled.
     void Update()
@@ -76,6 +81,8 @@ public class PlayerSelection : MonoBehaviour
        background.SetActive(false);
        avatar.transform.position=avatar.transform.position+new Vector3(-5,0,0);
        avatar.transform.rotation=Quaternion.Euler(0,75,0);
+       animator.Play("selection");
+       enemyAnimator.Play("Boxing");
 
     }    
     [ContextMenu("Punch!")]

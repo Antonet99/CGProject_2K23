@@ -4330,10 +4330,12 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 6b558c68180988f4ca2e817cfa71384f, type: 2}
   - {fileID: 9100000, guid: 89a954a0658f67a409fc764a904e2a7f, type: 2}
   - {fileID: 9100000, guid: 12340630ee49349458499099731df559, type: 2}
+  enemyController: {fileID: 9100000, guid: 16928bcf0f07a674ea9290b65bfad10b, type: 2}
   avatarAnimation:
   - {fileID: 9000000, guid: 03a6a0d5a333ff94da0202df8680e0e8, type: 3}
   - {fileID: 9000000, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
   - {fileID: 9000000, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
+  enemyAnimationAvatar: {fileID: 9000000, guid: 1780d1f2b2624104a93ce5e658c498eb, type: 3}
   isBlocking: 0
   isWinner: 0
 --- !u!95 &2120836025
