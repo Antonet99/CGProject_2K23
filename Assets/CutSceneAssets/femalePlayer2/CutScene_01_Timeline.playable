@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: "Non possiamo permettere che accada.   Dobbiamo lottare per la nostra
+  subtitleText: " Non possiamo permettere che accada.   Dobbiamo lottare per la nostra
     libert\xE0."
   rcolor: 0.44
   gcolor: 0.82
@@ -29,7 +29,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: Insieme, possiamo cambiare le sorti di questa guerra.
+  subtitleText: ' Insieme, possiamo cambiare le sorti di questa guerra.'
   rcolor: 0.44
   gcolor: 0.82
   bcolor: 0.92
@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: Pensaci. Vogliono distruggerci tutti.                       Vogliono
-    che viviamo sotto la loro dittatura.
+  subtitleText: ' Pensaci. Vogliono distruggerci tutti.                       Vogliono
+    che viviamo sotto la loro dittatura.'
   rcolor: 0.44
   gcolor: 0.82
   bcolor: 0.92
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: Ma come li combattiamo?
+  subtitleText: ' Ma come li combattiamo?'
   rcolor: 1
   gcolor: 1
   bcolor: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 3.7666666666666666
+    m_Start: 3.7666666666666684
     m_ClipIn: 0
     m_Asset: {fileID: 5249790171501336805}
     m_Duration: 2.1833333333333336
@@ -311,7 +311,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 6.109928331089517
+    m_Start: 6.1099283310895185
     m_ClipIn: 0
     m_Asset: {fileID: 7160633973507531627}
     m_Duration: 5
@@ -380,7 +380,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 11.109928331089517
+    m_Start: 11.109928331089522
     m_ClipIn: 0
     m_Asset: {fileID: 264178757582394089}
     m_Duration: 5
@@ -449,7 +449,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 16.109928331089517
+    m_Start: 16.109928331089524
     m_ClipIn: 0
     m_Asset: {fileID: -5649897278521991283}
     m_Duration: 5
@@ -518,7 +518,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 21.109928331089517
+    m_Start: 21.109928331089524
     m_ClipIn: 0
     m_Asset: {fileID: -8913257386300364816}
     m_Duration: 5
@@ -587,7 +587,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 26.116666666666667
+    m_Start: 26.116666666666685
     m_ClipIn: 0
     m_Asset: {fileID: -3817221975422401067}
     m_Duration: 3.3333333333333335
@@ -656,7 +656,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 29.45
+    m_Start: 29.450000000000028
     m_ClipIn: 0
     m_Asset: {fileID: -2067474899532644589}
     m_Duration: 5
@@ -665,7 +665,7 @@ MonoBehaviour:
     m_EaseInDuration: 0.5
     m_EaseOutDuration: 0.5
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -692,25 +692,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -725,7 +707,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 34.45
+    m_Start: 34.45000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 8845716926598152979}
     m_Duration: 5
@@ -733,53 +715,17 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -2931232393958430747}
     m_EaseInDuration: 0.5
     m_EaseOutDuration: 0.5
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -794,7 +740,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 39.45
+    m_Start: 39.449999999999996
     m_ClipIn: 0
     m_Asset: {fileID: -7408280851570637327}
     m_Duration: 5
@@ -802,29 +748,11 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -2931232393958430747}
     m_EaseInDuration: 0.5
     m_EaseOutDuration: 0.5
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -863,7 +791,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 44.45
+    m_Start: 44.449999999999996
     m_ClipIn: 0
     m_Asset: {fileID: 1491106047167749395}
     m_Duration: 3.3333333333333335
@@ -1335,7 +1263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: Abbiamo un'arma segreta. Ma abbiamo bisogno del tuo aiuto per recuperarla
+  subtitleText: ' Abbiamo un''arma segreta. Ma abbiamo bisogno del tuo aiuto per
+    recuperarla'
   rcolor: 0.44
   gcolor: 0.82
   bcolor: 0.92
@@ -1419,7 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: "Dobbiamo provare.                                             Se
+  subtitleText: " Dobbiamo provare.                                             Se
     non noi, chi lo far\xE0?"
   rcolor: 0.44
   gcolor: 0.82
@@ -1458,8 +1387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: Come e' successo?                                                         
-    Come hanno potuto subentrare cosi' in fretta?
+  subtitleText: ' Come e'' successo?                                                         
+    Come hanno potuto subentrare cosi'' in fretta?'
   rcolor: 1
   gcolor: 1
   bcolor: 1
@@ -1475,7 +1404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: "Bene. Lo far\xF2."
+  subtitleText: " Bene. Lo far\xF2."
   rcolor: 1
   gcolor: 1
   bcolor: 1
@@ -1532,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: Dobbiamo reagire.
+  subtitleText: ' Dobbiamo reagire.'
   rcolor: 0.44
   gcolor: 0.82
   bcolor: 0.92
@@ -2067,7 +1996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: Come? Hanno poteri sovrumani.                      Non possiamo batterli.
+  subtitleText: ' Come? Hanno poteri sovrumani.                      Non possiamo
+    batterli.'
   rcolor: 1
   gcolor: 1
   bcolor: 1
@@ -2452,7 +2382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59619bbd2b2123845ad91759dd79b7bd, type: 3}
   m_Name: SubtitleClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: Abbiamo un'arma segreta. Ma abbiamo bisogno del tuo aiuto per recuperarla.
+  subtitleText: ' Abbiamo un''arma segreta. Ma abbiamo bisogno del tuo aiuto per
+    recuperarla.'
   rcolor: 0.44
   gcolor: 0.82
   bcolor: 0.92
