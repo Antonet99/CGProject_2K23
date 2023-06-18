@@ -8925,14 +8925,9 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
   - {fileID: 919132149155446097, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
   animatorController:
-<<<<<<< Updated upstream
-  - {fileID: 9100000, guid: 89a954a0658f67a409fc764a904e2a7f, type: 2}
-  - {fileID: 9100000, guid: 12340630ee49349458499099731df559, type: 2}
-=======
   - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
->>>>>>> Stashed changes
   avatarAnimation:
   - {fileID: 9000000, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
   - {fileID: 9000000, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
