@@ -65,8 +65,8 @@ public class PlayerSelection : MonoBehaviour
         thisModel.transform.localScale=new Vector3(0.46f,0.46f,0.46f);
         avatar = thisModel;
         animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = animatorController[avatarSelected];// Set the animator controller
-        animator.avatar = avatarAnimation[avatarSelected];// Set the avatar for animation
+        //animator.runtimeAnimatorController = animatorController[avatarSelected];// Set the animator controller
+        //animator.avatar = avatarAnimation[avatarSelected];// Set the avatar for animation
         animator.Play("selection");
     }
     private void Save()
