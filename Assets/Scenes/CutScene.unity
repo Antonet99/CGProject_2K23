@@ -296,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Insieme, possiamo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5895dbd1da982e444b2ceaffdac7290f, type: 2}
   m_sharedMaterial: {fileID: 5910976369785614128, guid: 5895dbd1da982e444b2ceaffdac7290f, type: 2}
@@ -305,8 +305,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 33554431
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293644656
+  m_fontColor: {r: 0.44, g: 0.82, b: 0.92, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -680,6 +680,10 @@ PlayableDirector:
     value: {fileID: 1800372363}
   - key: {fileID: -2931232393958430747, guid: 1f413bef45b477a4d999e50ff3df1e47, type: 2}
     value: {fileID: 436245513}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 6414100604779816655, guid: 1f413bef45b477a4d999e50ff3df1e47, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1553810439
@@ -908,6 +912,8 @@ PlayableDirector:
     value: {fileID: 1800372363}
   - key: {fileID: -2931232393958430747, guid: 1f413bef45b477a4d999e50ff3df1e47, type: 2}
     value: {fileID: 436245513}
+  - key: {fileID: 6414100604779816655, guid: 1f413bef45b477a4d999e50ff3df1e47, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1722768393

@@ -7,10 +7,32 @@ using TMPro;
 
 public class MusicOptions : MonoBehaviour
 {
+    [Tooltip("Reference to the general mixer (the one that contains the musicMixer and the SFXMixer)")]
     public AudioMixer mixer;
-    public TMP_Text masterLabel, musicLabel, sfxLabel;
-    public Slider masterSlider, musicSlider, sfxSlider;
-    public GameObject selection,options,avatar;
+    [Space(5)]
+    [Header("GUI Components")]
+    [Tooltip("Label that contains the number of volume of general mixer")]
+    public TMP_Text masterLabel;
+     [Tooltip("Label that contains the number of volume of music mixer")]
+    public TMP_Text musicLabel;
+     [Tooltip("Label that contains the number of volume of sfx mixer")]
+    public TMP_Text sfxLabel;
+
+    [Tooltip("Slider that dinamically change the volume of general mixer")]
+    public Slider masterSlider;
+    [Tooltip("Slider that dinamically change the volume of music mixer")]
+    public Slider musicSlider;
+    [Tooltip("Slider that dinamically change the volume of sfx mixer")]
+    public Slider sfxSlider;
+
+    [Space(5)]
+    [Header("Re-apparing Object")]
+    [Tooltip("Object that have to re-appear when the volume menu is closed")]
+    public GameObject selection;
+    [Tooltip("Object that have to re-appear when the volume menu is closed")]
+    public GameObject options;
+    [Tooltip("Object that have to re-appear when the volume menu is closed")]
+    public GameObject avatar;
 
    
    //Start is called on the frame when a script is enabled just before
