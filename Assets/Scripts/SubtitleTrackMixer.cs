@@ -24,7 +24,7 @@ public class SubtitleTrackMixer : PlayableBehaviour
             {
                 ScriptPlayable<SubtitleBehavior> inputPlayable = (ScriptPlayable<SubtitleBehavior>)playable.GetInput(i);
                 SubtitleBehavior input = inputPlayable.GetBehaviour();
-                targetText = input.subtitleText+"              ";
+                targetText = input.subtitleText;
                 targetRcolor = input.rcolor;
                 targetGcolor = input.gcolor;
                 targetBcolor = input.bcolor;
@@ -42,7 +42,7 @@ public class SubtitleTrackMixer : PlayableBehaviour
                     printedText = targetText.Substring(0, visibleCharacterCount);
                 }
 
-            if (visibleCharacterCount >= targetText.Length)
+            if (visibleCharacterCount >= targetText.Length+15)
                 {
                     visibleCharacterCount = targetText.Length;
                     visibleCharacterCount=0;
