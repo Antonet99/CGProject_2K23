@@ -4594,6 +4594,9 @@ MonoBehaviour:
   avatarModels:
   - {fileID: 919132149155446097, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
   - {fileID: 919132149155446097, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
+  _avatar:
+  - {fileID: 9000000, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
+  - {fileID: 9000000, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
   isBlocking: 0
   isWinner: 0
 --- !u!95 &2120836025

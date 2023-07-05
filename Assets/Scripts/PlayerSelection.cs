@@ -5,9 +5,11 @@ public class PlayerSelection : MonoBehaviour
 {
     [SerializeField]
     public GameObject avatar, selection;
-    private int avatarSelected=0;
+    private int avatarSelected;
     public GameObject[] avatarModels;
     private Animator animator;
+    [SerializeField]
+    private Avatar[] _avatar;
     public bool isBlocking, isWinner;
     
 
@@ -16,7 +18,7 @@ public class PlayerSelection : MonoBehaviour
     {
         isBlocking=false;
         isWinner=false;
-        int avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
+        avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
         avatar=Instantiate(avatarModels[avatarSelected],transform.position,transform.rotation) as GameObject;
         UpdateAvatar(avatarSelected);
     }
@@ -56,6 +58,7 @@ public class PlayerSelection : MonoBehaviour
         thisModel.transform.localScale=new Vector3(0.46f,0.46f,0.46f);
         avatar = thisModel;
         animator = GetComponent<Animator>();
+        animator.avatar = _avatar[avatarSelected];
         animator.Play("Idle Walk Run Blend");
     }
 
