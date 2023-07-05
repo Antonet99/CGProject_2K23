@@ -8,10 +8,6 @@ public class PlayerSelection : MonoBehaviour
     private int avatarSelected=0;
     public GameObject[] avatarModels;
     private Animator animator;
-    public RuntimeAnimatorController[] animatorController;
-    //public RuntimeAnimatorController enemyController;
-    public Avatar[] avatarAnimation;
-    //public Avatar enemyAnimationAvatar;
     public bool isBlocking, isWinner;
     
 
@@ -60,7 +56,7 @@ public class PlayerSelection : MonoBehaviour
         thisModel.transform.localScale=new Vector3(0.46f,0.46f,0.46f);
         avatar = thisModel;
         animator = GetComponent<Animator>();
-        animator.Play("selection");
+        animator.Play("Idle Walk Run Blend");
     }
 
     private void Save()

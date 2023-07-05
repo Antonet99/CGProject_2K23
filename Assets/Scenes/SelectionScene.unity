@@ -2694,7 +2694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395904119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5649827, y: -0.52, z: -8.72075}
+  m_LocalPosition: {x: 1.5649827, y: -0.87, z: -8.72075}
   m_LocalScale: {x: 201.16113, y: 0.6, z: 1016.80493}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3566,12 +3566,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2120836024}
         m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
-        m_MethodName: StartPlaying
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4285,7 +4285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029107716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -16.66}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4590,20 +4590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatar: {fileID: 2120836022}
-  enemy: {fileID: 0}
   selection: {fileID: 881238565}
-  gamenvrionment: {fileID: 0}
-  background: {fileID: 2139058644}
   avatarModels:
   - {fileID: 919132149155446097, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
   - {fileID: 919132149155446097, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
-  animatorController:
-  - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
-  - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
-  - {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
-  avatarAnimation:
-  - {fileID: 9000000, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
-  - {fileID: 9000000, guid: 9a5fc913b6151fa4d9f2713261dd8ad6, type: 3}
   isBlocking: 0
   isWinner: 0
 --- !u!95 &2120836025
@@ -4616,7 +4606,7 @@ Animator:
   m_GameObject: {fileID: 2120836022}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
