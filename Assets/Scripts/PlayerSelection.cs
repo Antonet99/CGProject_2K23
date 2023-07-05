@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSelection : MonoBehaviour
 {
     [SerializeField]
-    public GameObject avatar,enemy, selection,gamenvrionment,background;
+    public GameObject avatar, selection;
     private int avatarSelected=0;
     public GameObject[] avatarModels;
-    private Animator animator, enemyAnimator;
+    private Animator animator;
     public RuntimeAnimatorController[] animatorController;
     //public RuntimeAnimatorController enemyController;
     public Avatar[] avatarAnimation;
@@ -22,14 +23,6 @@ public class PlayerSelection : MonoBehaviour
         int avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
         avatar=Instantiate(avatarModels[avatarSelected],transform.position,transform.rotation) as GameObject;
         UpdateAvatar(avatarSelected);
-        //enemyAnimator.runtimeAnimatorController=enemyController;
-        //enemyAnimator.avatar=enemyAnimationAvatar;
-        enemyAnimator=enemy.GetComponent<Animator>();
-    }
-    //Update is called every frame, if the MonoBehaviour is enabled.
-    void Update()
-    {
-        
     }
     
     //Function to go to the next avatar (called when pressing next button)
@@ -44,6 +37,7 @@ public class PlayerSelection : MonoBehaviour
         UpdateAvatar(avatarSelected);
         Save();
     }
+
     //Function to go to the previous avatar (called when pressing previous button)
     public void PreviousAvatar()
     {
@@ -56,6 +50,7 @@ public class PlayerSelection : MonoBehaviour
         UpdateAvatar(avatarSelected);
         Save();
     }
+
     //Function to update the avatar model
     private void UpdateAvatar(int avatarSelected)
     {
@@ -65,47 +60,16 @@ public class PlayerSelection : MonoBehaviour
         thisModel.transform.localScale=new Vector3(0.46f,0.46f,0.46f);
         avatar = thisModel;
         animator = GetComponent<Animator>();
-        //animator.runtimeAnimatorController = animatorController[avatarSelected];// Set the animator controller
-        //animator.avatar = avatarAnimation[avatarSelected];// Set the avatar for animation
         animator.Play("selection");
     }
+
     private void Save()
     {
         PlayerPrefs.SetInt("avatarSelected", avatarSelected);
     }
-    public void StartPlaying()
-    {
-       selection.SetActive(false);
-       gamenvrionment.SetActive(true);
-       enemy.SetActive(true);
-       background.SetActive(false);
-       avatar.transform.position=avatar.transform.position+new Vector3(-5,0,0);
-       avatar.transform.rotation=Quaternion.Euler(0,75,0);
-       animator.Play("selection");
-       enemyAnimator.Play("Boxing");
 
-    }    
-    [ContextMenu("Punch!")]
-    public void Punching()
+    public void ChangeScene(int sceneID)
     {
-        animator.SetTrigger("Punching");
-    }
-    [ContextMenu("Kick!")]
-    public void Kicking()
-    {
-        animator.SetTrigger("Kicking");
-    }
-    [ContextMenu("Block!")]
-    public void Blocking()
-    {
-        isBlocking=!isBlocking;
-        animator.SetBool("Blocking", isBlocking);
-    }
-    [ContextMenu("Winner!")]
-    public void Winning()
-    {
-        isWinner=!isWinner;
-        animator.SetBool("Winning", isWinner);
+        SceneManager.LoadScene(sceneID);
     }
 }
-

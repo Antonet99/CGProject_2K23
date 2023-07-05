@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerSelection : MonoBehaviour
+public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField]
     public Animator animator;
