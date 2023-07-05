@@ -10,14 +10,14 @@ public class PlayerSelection : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private Avatar[] _avatar;
-    public bool isBlocking, isWinner;
+    //public bool isBlocking, isWinner;
     
 
     //Start is called before the first frame update
     void Start()
     {
-        isBlocking=false;
-        isWinner=false;
+        //isBlocking=false;
+        //isWinner=false;
         avatarSelected = PlayerPrefs.HasKey("avatarSelected") ? PlayerPrefs.GetInt("avatarSelected") : 0;
         avatar=Instantiate(avatarModels[avatarSelected],transform.position,transform.rotation) as GameObject;
         UpdateAvatar(avatarSelected);
