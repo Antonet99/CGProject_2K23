@@ -9,8 +9,10 @@ namespace EtrasStarterAssets
     public class AudioManager : MonoBehaviour
     {
         public List<Sound> sounds = new List<Sound>();
+        [SerializeField] //Aggiunto da noi per mettere il nostro audiomixer al posto di quello preimpostato
+        private AudioMixer mixer;
         private AudioMixerGroup sfx;
-        private AudioMixerGroup music;
+        //private AudioMixerGroup music;
 
         //If script added or reset click
         private void Reset()
@@ -23,8 +25,7 @@ namespace EtrasStarterAssets
 
         void Awake()
         {
-            AudioMixer mixer = Resources.Load("StarterAssetsAudioMixer") as AudioMixer;
-            music = mixer.FindMatchingGroups("Music")[0];
+            //music = mixer.FindMatchingGroups("Music")[0];
             sfx = mixer.FindMatchingGroups("SFX")[0];
 
             foreach (Sound s in sounds)
@@ -37,14 +38,14 @@ namespace EtrasStarterAssets
                 s.source.loop = s.loop;
                 s.source.spatialBlend = s.spatialBlend;
 
-                if (s.isMusic)
+               /* if (s.isMusic)
                 {
                     s.source.outputAudioMixerGroup = music;
                 }
                 else
-                {
+                {*/
                     s.source.outputAudioMixerGroup = sfx;
-                }
+               // }
 
             }
         }

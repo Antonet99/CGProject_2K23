@@ -4972,7 +4972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1214894670
 Transform:
   m_ObjectHideFlags: 0
@@ -5011,6 +5011,7 @@ MonoBehaviour:
     isMusic: 0
     loop: 0
     source: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 72796d9fd02b7314e9bea31827ce8915, type: 2}
 --- !u!1 &1223102432
 GameObject:
   m_ObjectHideFlags: 0
@@ -5732,6 +5733,7 @@ MonoBehaviour:
     isMusic: 0
     loop: 0
     source: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 72796d9fd02b7314e9bea31827ce8915, type: 2}
 --- !u!1 &1428544074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,6 +6650,7 @@ MonoBehaviour:
     isMusic: 0
     loop: 0
     source: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 72796d9fd02b7314e9bea31827ce8915, type: 2}
 --- !u!1 &1619612596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9071,6 +9074,7 @@ MonoBehaviour:
     isMusic: 0
     loop: 0
     source: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 72796d9fd02b7314e9bea31827ce8915, type: 2}
 --- !u!4 &57086944330485910
 Transform:
   m_ObjectHideFlags: 0
