@@ -17,6 +17,7 @@ namespace Etra.StarterAssets.Input
         public bool crouch;
         public bool interact;
         public bool dash;
+        public bool punch;
 
 
 
@@ -149,6 +150,10 @@ namespace Etra.StarterAssets.Input
         {
             Item9SelectInput(value.isPressed);
         }
+         public void OnPunch(InputValue value)
+        {
+            PunchInput(value.isPressed);
+        }
 
 
 #else
@@ -172,6 +177,11 @@ namespace Etra.StarterAssets.Input
             if (Input.GetButtonDown("Fire1"))
             {
                 ShootInput(true);
+            }
+
+              if (Input.GetButtonDown("Punch"))
+            {
+                PunchInput(true);
             }
 
             ///****************************
@@ -253,6 +263,10 @@ namespace Etra.StarterAssets.Input
         public void DashInput(bool newDashState)
         {
             dash = newDashState;
+        }
+        public void PunchInput(bool newPunchState)
+        {
+            punch = newPunchState;
         }
 
         public void InventoryScrollInput(float newScrollState)

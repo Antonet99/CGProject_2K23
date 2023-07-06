@@ -1544,6 +1544,8 @@ GameObject:
   - component: {fileID: 388472826}
   - component: {fileID: 388472825}
   - component: {fileID: 388472824}
+  - component: {fileID: 388472830}
+  - component: {fileID: 388472831}
   m_Layer: 7
   m_Name: EtraAbilityManager
   m_TagString: Untagged
@@ -1690,6 +1692,34 @@ MonoBehaviour:
   - {fileID: 388472826}
   - {fileID: 388472825}
   - {fileID: 388472824}
+  - {fileID: 388472831}
+--- !u!114 &388472830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388472822}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13267cd1e5d3ea641ae09ed3a6eeaa00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBlocking: 0
+  isWinner: 0
+--- !u!114 &388472831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388472822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b27d59b43d3d1d40965c59b66774911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEnabled: 1
 --- !u!4 &389279371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 068921e4cfb73254fa6130fb705d57b9, type: 3}
@@ -1849,6 +1879,7 @@ MonoBehaviour:
   crouch: 0
   interact: 0
   dash: 0
+  punch: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1

@@ -1,17 +1,34 @@
+using Etra.StarterAssets;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField]
-    public Animator animator;
+    private Animator _animator;
     public bool isBlocking=false, isWinner=false;
 
-    [ContextMenu("Punch!")]
-    public void Punching()
+    void Start()
     {
-        animator.SetTrigger("Punching");
+        _animator = EtraCharacterMainController.Instance.modelParent.GetComponentInChildren<Animator>();
     }
+    public void OnPunch(InputValue value)
+        {
+            PunchInput(value.isPressed);
+        }
+    
+    public void PunchInput(bool PunchState)
+        {
+            if(PunchState){
+            _animator.SetTrigger("Punch");
+            }
+        }
+    void Update(){
+     if (Input.GetButtonDown("Punch"))
+            {
+                PunchInput(true);
+            }
+    }
+    /*
     [ContextMenu("Kick!")]
     public void Kicking()
     {
@@ -28,5 +45,5 @@ public class PlayerAnimation : MonoBehaviour
     {
         isWinner=!isWinner;
         animator.SetBool("Winning", isWinner);
-    }
+    }*/
 }
