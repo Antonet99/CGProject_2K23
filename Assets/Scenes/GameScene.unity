@@ -1546,6 +1546,7 @@ GameObject:
   - component: {fileID: 388472824}
   - component: {fileID: 388472830}
   - component: {fileID: 388472831}
+  - component: {fileID: 388472832}
   m_Layer: 7
   m_Name: EtraAbilityManager
   m_TagString: Untagged
@@ -1693,6 +1694,7 @@ MonoBehaviour:
   - {fileID: 388472825}
   - {fileID: 388472824}
   - {fileID: 388472831}
+  - {fileID: 388472832}
 --- !u!114 &388472830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1719,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b27d59b43d3d1d40965c59b66774911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEnabled: 1
+--- !u!114 &388472832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388472822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4af462e0ce11940aac84471c63f746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   abilityEnabled: 1
@@ -1880,6 +1895,7 @@ MonoBehaviour:
   interact: 0
   dash: 0
   punch: 0
+  kick: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
