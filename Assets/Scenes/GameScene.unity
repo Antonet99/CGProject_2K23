@@ -1544,9 +1544,9 @@ GameObject:
   - component: {fileID: 388472826}
   - component: {fileID: 388472825}
   - component: {fileID: 388472824}
-  - component: {fileID: 388472830}
   - component: {fileID: 388472831}
   - component: {fileID: 388472832}
+  - component: {fileID: 388472833}
   m_Layer: 7
   m_Name: EtraAbilityManager
   m_TagString: Untagged
@@ -1695,20 +1695,7 @@ MonoBehaviour:
   - {fileID: 388472824}
   - {fileID: 388472831}
   - {fileID: 388472832}
---- !u!114 &388472830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388472822}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13267cd1e5d3ea641ae09ed3a6eeaa00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBlocking: 0
-  isWinner: 0
+  - {fileID: 388472833}
 --- !u!114 &388472831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,6 +1719,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb4af462e0ce11940aac84471c63f746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEnabled: 1
+--- !u!114 &388472833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388472822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db34cd7023e319e48b69ea246f9efd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   abilityEnabled: 1
@@ -1896,6 +1896,7 @@ MonoBehaviour:
   dash: 0
   punch: 0
   kick: 0
+  block: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1

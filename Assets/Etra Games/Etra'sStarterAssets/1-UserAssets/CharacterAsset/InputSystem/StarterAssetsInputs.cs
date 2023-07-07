@@ -19,6 +19,7 @@ namespace Etra.StarterAssets.Input
         public bool dash;
         public bool punch;
         public bool kick;
+        public bool block;
 
 
 
@@ -162,6 +163,11 @@ namespace Etra.StarterAssets.Input
             KickInput(value.isPressed);
         }
 
+        public void OnBlock(InputValue value)
+        {
+            BlockInput(value.isPressed);
+        }
+
 
 #else
 	// old input system support
@@ -195,6 +201,17 @@ namespace Etra.StarterAssets.Input
             {
                 KickInput(true);
             }
+
+            if(Input.GetButtonDown("Block"))
+            {
+                BlockInput(true);
+            }
+
+            if(Input.GetButtonUp("Block"))
+            {
+                BlockInput(false);
+            }
+
 
             ///****************************
             /// THESE AXIS AND BUTTONS NEED ADDED
@@ -286,6 +303,13 @@ namespace Etra.StarterAssets.Input
         {
             kick = newKickState;
         }
+
+        public void BlockInput(bool newBlockState)
+        {
+           block= newBlockState;
+        }
+
+
 
         public void InventoryScrollInput(float newScrollState)
         {
