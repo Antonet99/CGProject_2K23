@@ -20,6 +20,7 @@ namespace Etra.StarterAssets.Input
         public bool punch;
         public bool kick;
         public bool block;
+        public bool slam;
 
 
 
@@ -168,6 +169,11 @@ namespace Etra.StarterAssets.Input
             BlockInput(value.isPressed);
         }
 
+        public void OnSlam(InputValue value)
+        {
+            SlamInput(value.isPressed);
+        }
+
 
 #else
 	// old input system support
@@ -212,6 +218,10 @@ namespace Etra.StarterAssets.Input
                 BlockInput(false);
             }
 
+            if (Input.GetButtonDown("Slam"))
+            {
+                SlamInput(true);
+            }
 
             ///****************************
             /// THESE AXIS AND BUTTONS NEED ADDED
@@ -307,6 +317,11 @@ namespace Etra.StarterAssets.Input
         public void BlockInput(bool newBlockState)
         {
            block= newBlockState;
+        }
+
+        public void SlamInput(bool newSlamState)
+        {
+            slam = newSlamState;
         }
 
 
