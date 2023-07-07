@@ -20,7 +20,7 @@ namespace Etra.StarterAssets.Input
         public bool punch;
         public bool kick;
         public bool block;
-        public bool slam;
+        public bool throwenemy;
 
 
 
@@ -169,9 +169,9 @@ namespace Etra.StarterAssets.Input
             BlockInput(value.isPressed);
         }
 
-        public void OnSlam(InputValue value)
+        public void OnThrow(InputValue value)
         {
-            SlamInput(value.isPressed);
+            ThrowInput(value.isPressed);
         }
 
 
@@ -218,9 +218,9 @@ namespace Etra.StarterAssets.Input
                 BlockInput(false);
             }
 
-            if (Input.GetButtonDown("Slam"))
+            if (Input.GetButtonDown("Throw"))
             {
-                SlamInput(true);
+                ThrowInput(true);
             }
 
             ///****************************
@@ -319,9 +319,9 @@ namespace Etra.StarterAssets.Input
            block= newBlockState;
         }
 
-        public void SlamInput(bool newSlamState)
+        public void ThrowInput(bool newThrowState)
         {
-            slam = newSlamState;
+            throwenemy = newThrowState;
         }
 
 

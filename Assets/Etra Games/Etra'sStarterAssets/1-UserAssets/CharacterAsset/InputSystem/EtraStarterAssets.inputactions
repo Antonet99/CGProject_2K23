@@ -222,7 +222,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Slam",
+                    "name": "Throw",
                     "type": "Button",
                     "id": "d25e2b6a-321f-46ce-a74f-bc82112605e7",
                     "expectedControlType": "Button",
@@ -745,7 +745,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Slam",
+                    "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
