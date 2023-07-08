@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - WallRight
   - WallLeft
+  - AttackWayPoint
+  - DefendWayPoint
   layers:
   - Default
   - TransparentFX

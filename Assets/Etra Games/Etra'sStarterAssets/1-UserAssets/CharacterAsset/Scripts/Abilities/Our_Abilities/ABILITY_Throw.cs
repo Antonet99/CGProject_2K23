@@ -37,8 +37,8 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                 Debug.Log(_areNear);
                 if(_areNear){
                     Debug.Log("presa");
-                    //parentTransform.Rotate(0,-81.329f,0);
-                    //enemy.transform.Rotate(0,-89.445f,0);
+                    parentTransform.Rotate(-90,0f,0);
+                    enemy.transform.Rotate(90,0f,0);
                     _animator.SetTrigger("Press");
                     _enemyAnimator.SetTrigger("Throw");
                 }
