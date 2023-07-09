@@ -7,7 +7,7 @@ public class WalkState : StateMachineBehaviour
 {
     private Transform attackWayPoint,defendWayPoint, playerTransform;
     private NavMeshAgent agent;
-    private float distanceAttack = 3f;
+    private float distanceAttack = 4.8f;
     private string[] attacks = new string[]{"Kick", "Punch"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

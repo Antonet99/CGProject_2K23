@@ -6,9 +6,9 @@ public class IdleState : StateMachineBehaviour
 {
     private GameObject player;
     private Transform playerTransform;
-    private float distanceRangeMin = 2.5f;
-    private float distanceRangeMax = 5f;
-    private float distanceAttack = 3f;
+    private float distanceRangeMin = 4f;
+    private float distanceRangeMax = 8f;
+    private float distanceAttack = 4.8f;
     private string[] attacks = new string[]{"Kick", "Punch"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
