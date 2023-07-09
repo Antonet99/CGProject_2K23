@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 9720f7036ac37e64c88a1d788f0278a7, type: 2}
+  m_NoiseProfile: {fileID: 0}
   m_PivotOffset: {x: 0, y: 0, z: 1}
   m_AmplitudeGain: 0.5
   m_FrequencyGain: 0.3
@@ -1770,6 +1770,7 @@ GameObject:
   - component: {fileID: 408307859}
   - component: {fileID: 408307858}
   - component: {fileID: 408307862}
+  - component: {fileID: 408307863}
   m_Layer: 7
   m_Name: EtraCharacterAssetBase
   m_TagString: Player
@@ -1979,7 +1980,7 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1
-  landingShakeEnabled: 1
+  landingShakeEnabled: 0
   landingShake: {x: 1, y: 0.1}
   _verticalVelocity: 0
   _fallTimeoutDelta: 0
@@ -1999,6 +2000,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e523c070ce34e5b4cbbbb55cf037f969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &408307863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408307856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &409076749
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,11 +3246,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 695042413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89179c2dfec375242ab58afd9ae6ff54, type: 3}
+  m_Script: {fileID: 11500000, guid: e8ccdb865f2ab5247ae084514c856637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 60
-  timeText: {fileID: 695042416}
 --- !u!114 &695042416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8987,6 +9007,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1864767768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864767769}
+  m_Layer: 0
+  m_Name: HealthStatusManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864767769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864767768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07593799, y: -0.53550255, z: -3.0319989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1891543135
 GameObject:
   m_ObjectHideFlags: 0
@@ -9829,7 +9880,7 @@ GameObject:
   - component: {fileID: 2102931138}
   m_Layer: 0
   m_Name: EtraCharacterAssetGroup
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10374,6 +10425,7 @@ GameObject:
   - component: {fileID: 997759004}
   - component: {fileID: 5866666020918797708}
   - component: {fileID: 5866666020918797709}
+  - component: {fileID: 5866666020918797710}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -11430,6 +11482,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5866666020918797710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149078402379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d780f255ad995714fa9c2ea98ea67f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6142095153655353666
 Transform:
   m_ObjectHideFlags: 0
