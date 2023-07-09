@@ -1640,6 +1640,16 @@ MonoBehaviour:
   downUnlocked: 0
   rightUnlocked: 1
   leftUnlocked: 1
+  usePositionLimit: 1
+  positionXLimitMin: -2.5
+  positionXLimitMax: 13
+  positionYLimitMin: 0
+  positionYLimitMax: 0
+  positionZLimitMin: 0
+  positionZLimitMax: 0
+  limitXAxis: 1
+  limitYAxis: 0
+  limitZAxis: 0
   passedMovementInput: {x: 0, y: 0}
   sprintSpeed: 6
   isCrouched: 0

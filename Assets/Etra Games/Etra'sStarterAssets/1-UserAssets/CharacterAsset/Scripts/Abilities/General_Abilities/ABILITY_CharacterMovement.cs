@@ -26,6 +26,17 @@ namespace Etra.StarterAssets.Abilities
         public bool rightUnlocked = true;
         public bool leftUnlocked = true;
 
+        [Header("Position Limit")]
+        public bool usePositionLimit = false;
+        public float positionXLimitMin;
+        public float positionXLimitMax;
+        public float positionYLimitMin;
+        public float positionYLimitMax;
+        public float positionZLimitMin;
+        public float positionZLimitMax;
+        public bool limitXAxis = true;
+        public bool limitYAxis = false;
+        public bool limitZAxis = true;
 
         //References
         [HideInInspector] public Vector2 passedMovementInput;
@@ -87,6 +98,7 @@ namespace Etra.StarterAssets.Abilities
                 sprintSource.sprintSpeed = sprintSpeed;
             }
             else { sprintSpeed = moveSpeed; }
+            playerTransform=this.GetComponentInParent<Transform>();
         }
 
         float stepTime = 0;
@@ -102,6 +114,33 @@ namespace Etra.StarterAssets.Abilities
             {
                 inputX = 0;
                 inputY = 0;
+            }
+
+            if (usePositionLimit)
+            {
+                // Get the current position of the game object
+                Vector3 currentPosition = playerTransform.parent.position;
+
+                // Apply position limits to each axis
+                if (limitXAxis)
+                    currentPosition.x = Mathf.Clamp(currentPosition.x, positionXLimitMin, positionXLimitMax);
+
+                if (limitYAxis)
+                    currentPosition.y = Mathf.Clamp(currentPosition.y, positionYLimitMin, positionYLimitMax);
+
+                if (limitZAxis)
+                    currentPosition.z = Mathf.Clamp(currentPosition.z, positionZLimitMin, positionZLimitMax);
+
+                // Set the updated position back to the game object
+                playerTransform.parent.position = currentPosition;
+
+                // Additional step to handle minimum limit correctly
+                if (currentPosition.x == positionXLimitMin && limitXAxis)
+                    _controller.Move(Vector3.right * 0.01f); // Move the character slightly to prevent getting stuck at the minimum limit
+                if (currentPosition.y == positionYLimitMin && limitYAxis)
+                    _controller.Move(Vector3.up * 0.01f); // Move the character slightly to prevent getting stuck at the minimum limit
+                if (currentPosition.z == positionZLimitMin && limitZAxis)
+                    _controller.Move(Vector3.forward * 0.01f); // Move the character slightly to prevent getting stuck at the minimum limit
             }
 
             //If all movement is unlocked, don't worry about modifying the movement input variables.
@@ -138,7 +177,6 @@ namespace Etra.StarterAssets.Abilities
                 {
                     if (inputY < 0) { inputY = 0; }
                 }
-
             }
             passedMovementInput = new Vector2(inputX, inputY);
 
@@ -248,6 +286,8 @@ namespace Etra.StarterAssets.Abilities
         }
 
         int stepSoundCount = 0;
+        private Transform playerTransform;
+
         public void PlayFootstepFps()
         {
             foostepSoundManager.Play(foostepSoundManager.sounds[stepSoundCount++ % foostepSoundManager.sounds.Count]);
