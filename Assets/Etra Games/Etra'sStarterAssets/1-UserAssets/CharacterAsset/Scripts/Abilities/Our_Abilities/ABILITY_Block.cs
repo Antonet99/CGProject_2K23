@@ -29,6 +29,7 @@ public class ABILITY_Block : EtraAbilityBaseClass
             if(_hasAnimator)
             {
                 _animator.SetBool("Block",_input.block);
+                //_input.healthStatusManager.SetStatus("block",_input.block,"player");
             }
         }
     }

@@ -6,11 +6,15 @@ public class IdleState : StateMachineBehaviour
 {
     private GameObject player;
     private Transform playerTransform;
+    private float distanceRangeMin = 2.5f;
+    private float distanceRangeMax = 5f;
+    private float distanceAttack = 3f;
+    private string[] attacks = new string[]{"Kick", "Punch"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player=GameObject.FindGameObjectWithTag("Player");
+        player=GameObject.Find("EtraCharacterAssetBase");
         playerTransform=player.transform;
     }
 
@@ -18,9 +22,14 @@ public class IdleState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(playerTransform.position,animator.transform.position);
-        if (distance>4)
+        if (distance>distanceRangeMin && distance<distanceRangeMax)
         {
             animator.SetBool("IsWalking",true);
+        }
+        if (distance<distanceAttack)
+        {
+            animator.transform.LookAt(playerTransform);
+            animator.SetTrigger(attacks[Random.Range(0,attacks.Length)]);
         }
     }
 

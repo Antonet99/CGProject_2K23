@@ -22,7 +22,9 @@ namespace Etra.StarterAssets.Input
         public bool block;
         public bool throwenemy;
 
-
+        //aggiunto per gestire la vita e lo status del giocatore
+        //[Header("Health and Status Manager Settings")]
+        //public HealthStatusManager healthStatusManager;
 
         [Header("Movement Settings")]
         public bool analogMovement;
