@@ -11,6 +11,8 @@ public class ABILITY_Throw : EtraAbilityBaseClass
     private StarterAssetsInputs _input;
     bool _hasAnimator, _areNear;
     public GameObject enemy;
+    private Vector3 currentRotation, currentEnemyRotation;
+    private Quaternion newRotation, newEnemyRotation;
 
     public override void abilityStart()
         {
@@ -37,8 +39,12 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                 Debug.Log(_areNear);
                 if(_areNear){
                     Debug.Log("presa");
-                    parentTransform.Rotate(-90,0f,0);
-                    enemy.transform.Rotate(90,0f,0);
+                    currentRotation = parentTransform.rotation.eulerAngles;
+                    newRotation=Quaternion.Euler(currentRotation.x,currentRotation.y,0);
+                    currentEnemyRotation = enemy.transform.rotation.eulerAngles;
+                    newEnemyRotation=Quaternion.Euler(currentEnemyRotation.x,currentEnemyRotation.y,90);
+                    parentTransform.rotation=newRotation;
+                    enemy.transform.rotation = newEnemyRotation;
                     _animator.SetTrigger("Press");
                     _enemyAnimator.SetTrigger("Throw");
                 }
