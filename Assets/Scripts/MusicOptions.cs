@@ -24,16 +24,6 @@ public class MusicOptions : MonoBehaviour
     public Slider musicSlider;
     [Tooltip("Slider that dinamically change the volume of sfx mixer")]
     public Slider sfxSlider;
-
-    [Space(5)]
-    [Header("Re-apparing Object")]
-    [Tooltip("Object that have to re-appear when the volume menu is closed")]
-    public GameObject selection;
-    [Tooltip("Object that have to re-appear when the volume menu is closed")]
-    public GameObject options;
-    [Tooltip("Object that have to re-appear when the volume menu is closed")]
-    public GameObject avatar;
-
    
    //Start is called on the frame when a script is enabled just before
    //any of the Update methods is called the first time.
@@ -70,16 +60,5 @@ public class MusicOptions : MonoBehaviour
         sfxLabel.text=Mathf.RoundToInt(sfxSlider.value+80).ToString();
         mixer.SetFloat("SFXVol", sfxSlider.value);
         PlayerPrefs.SetFloat("SFXVol", sfxSlider.value);
-    }
-
-    public void SetVisibleMenu(){
-        selection.SetActive(false);
-        avatar.SetActive(false);
-        options.SetActive(true);
-    }
-        public void CloseMenu(){
-        options.SetActive(false);
-        selection.SetActive(true);
-        avatar.SetActive(true);
     }
 }
