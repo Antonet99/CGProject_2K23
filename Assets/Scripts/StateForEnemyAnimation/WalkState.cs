@@ -26,7 +26,15 @@ public class WalkState : StateMachineBehaviour
     {
         agent.SetDestination(playerTransform.position);
         float distance = Vector3.Distance(playerTransform.position,animator.transform.position);
-        if (distance<distanceAttack)
+        if (distance<=1.5f)
+        {
+            agent.SetDestination(defendWayPoint.position);
+        }
+        if (distance>=1.5f)
+        {
+            agent.SetDestination(playerTransform.position);
+        }
+        if (distance<=distanceAttack)
         {
             animator.transform.LookAt(playerTransform);
             animator.SetTrigger(attacks[Random.Range(0,attacks.Length)]);

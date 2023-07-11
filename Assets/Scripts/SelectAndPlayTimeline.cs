@@ -20,8 +20,13 @@ public class SelectAndPlayTimeline : MonoBehaviour
 
     private void OnTimelineStopped(PlayableDirector director)
     {
-        SceneManager.LoadScene(2);
+
+        ChangeScene(2);
         // Code to return to the game when the timeline is ended
         // Add your implementation here
+    }
+    public void ChangeScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
     }
 }
