@@ -19,14 +19,14 @@ public class IdleState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Mathf.Abs(attackWayPoint.position.x-animator.transform.position.x);
-        int randomNum = Random.Range(0, attacks.Length);
-        Debug.Log(randomNum);
         if (distance>0.5 && distance<distanceRangeMax)
         {
             animator.SetBool("IsWalking",true);
         }
         else
         {
+            int randomNum = Random.Range(0, attacks.Length);
+            Debug.Log(randomNum);
             animator.transform.rotation=Quaternion.Euler(0f,269.445f,0f);
             animator.SetTrigger(attacks[randomNum]);
         }
