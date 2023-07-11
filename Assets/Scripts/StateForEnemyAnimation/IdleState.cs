@@ -7,19 +7,20 @@ public class IdleState : StateMachineBehaviour
 {
     private Transform attackWayPoint;
     private float distanceRangeMax = 20f;
-    private string[] attacks = new string[]{"Kick", "Punch"};
+    private string[] attacks = new string[]{"Punch","Kick"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         attackWayPoint=GameObject.FindGameObjectWithTag("AttackWayPoint").transform;
-        Debug.Log(attacks.Length);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Mathf.Abs(attackWayPoint.position.x-animator.transform.position.x);
+        int randomNum = Random.Range(0, attacks.Length);
+        Debug.Log(randomNum);
         if (distance>0.5 && distance<distanceRangeMax)
         {
             animator.SetBool("IsWalking",true);
@@ -27,7 +28,7 @@ public class IdleState : StateMachineBehaviour
         else
         {
             animator.transform.rotation=Quaternion.Euler(0f,269.445f,0f);
-            animator.SetTrigger(attacks[Random.Range(0, attacks.Length)]);
+            animator.SetTrigger(attacks[randomNum]);
         }
     }
 
