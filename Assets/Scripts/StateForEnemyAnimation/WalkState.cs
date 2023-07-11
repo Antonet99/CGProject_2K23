@@ -7,8 +7,6 @@ public class WalkState : StateMachineBehaviour
 {
     private Transform attackWayPoint,defendWayPoint;
     private NavMeshAgent agent;
-    private float distanceAttack = 1.2f;
-    private string[] attacks = new string[]{"Kick", "Punch"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,31 +14,23 @@ public class WalkState : StateMachineBehaviour
         agent = animator.GetComponent<NavMeshAgent>();
         attackWayPoint=GameObject.FindGameObjectWithTag("AttackWayPoint").transform;
         defendWayPoint=GameObject.FindGameObjectWithTag("DefendWayPoint").transform;
-        //playerTransform=GameObject.Find("EtraCharacterAssetBase").transform;
         agent.speed = 3.5f;
-        //agent.SetDestination(attackWayPoint.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(attackWayPoint.position);
-        float distance = Vector3.Distance(attackWayPoint.position,animator.transform.position);
-        if (distance<=distanceAttack)
+        float distance = Mathf.Abs(attackWayPoint.position.x-animator.transform.position.x);
+        
+        if(distance>0.2 && distance<0.5)
         {
-            animator.transform.LookAt(attackWayPoint);
-            //animator.SetBool("IsWalking",false);
-            animator.SetTrigger(attacks[Random.Range(0,attacks.Length)]);
+            animator.SetBool("IsWalking",false);
         }
-        if(agent.remainingDistance==agent.stoppingDistance)
+        if(distance<=0.2)
         {
-        agent.SetDestination(agent.transform.position);    
-        }
-        if(agent.remainingDistance<agent.stoppingDistance)
-        {
-            agent.speed = 4.8f;
+            agent.speed = 10f;
             agent.SetDestination(defendWayPoint.position);
-            //animator.SetBool("IsWalking",true);
         }
         agent.speed = 3.5f;
     }
