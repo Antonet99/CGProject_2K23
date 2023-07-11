@@ -45,6 +45,7 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                     newEnemyRotation=Quaternion.Euler(currentEnemyRotation.x,currentEnemyRotation.y,90);
                     parentTransform.rotation=newRotation;
                     enemy.transform.rotation = newEnemyRotation;
+                    enemy.transform.position= new Vector3(enemy.transform.position.x-0.87684f,enemy.transform.position.y-0.13948f,enemy.transform.position.z);
                     _animator.SetTrigger("Press");
                     _enemyAnimator.SetTrigger("Throw");
                 }
