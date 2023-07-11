@@ -4,31 +4,33 @@ using UnityEngine;
 
 public class IdleState : StateMachineBehaviour
 {
-    private GameObject player;
-    private Transform playerTransform;
-    private float distanceRangeMin = 4f;
+    //private GameObject player;
+    //private Transform playerTransform;
+    private Transform attackWayPoint;
+    private float distanceRangeMin = 2f;
     private float distanceRangeMax = 8f;
-    private float distanceAttack = 4.8f;
+    private float distanceAttack = 1.2f;
     private string[] attacks = new string[]{"Kick", "Punch"};
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player=GameObject.Find("EtraCharacterAssetBase");
-        playerTransform=player.transform;
+        attackWayPoint=GameObject.FindGameObjectWithTag("AttackWayPoint").transform;
+        //player=GameObject.Find("EtraCharacterAssetBase");
+        //playerTransform=player.transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        float distance = Vector3.Distance(playerTransform.position,animator.transform.position);
+        float distance = Vector3.Distance(attackWayPoint.position,animator.transform.position);
         if (distance>distanceRangeMin && distance<distanceRangeMax)
         {
             animator.SetBool("IsWalking",true);
         }
-        if (distance<distanceAttack)
+        if (distance<=distanceAttack)
         {
-            animator.transform.LookAt(playerTransform);
+            animator.transform.LookAt(attackWayPoint);
             animator.SetTrigger(attacks[Random.Range(0,attacks.Length)]);
         }
     }
