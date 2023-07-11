@@ -115,7 +115,6 @@ namespace Etra.StarterAssets.Abilities
                 inputX = 0;
                 inputY = 0;
             }
-
             if (usePositionLimit)
             {
                 // Get the current position of the game object
