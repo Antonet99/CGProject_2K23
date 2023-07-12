@@ -8,12 +8,14 @@ public class ABILITY_Block : EtraAbilityBaseClass
     {
         private Animator _animator;
         private StarterAssetsInputs _input;
+        private HealthStatusManager _healthStatusManager;
         bool _hasAnimator;
 
     public override void abilityStart()
         {
             mainController = GetComponentInParent<EtraCharacterMainController>();
             _input = GetComponentInParent<StarterAssetsInputs>();
+            _healthStatusManager = GetComponentInParent<HealthStatusManager>();
             _hasAnimator = EtrasResourceGrabbingFunctions.TryGetComponentInChildren<Animator>(EtraCharacterMainController.Instance.modelParent);
             if (_hasAnimator) {
                 _animator = EtraCharacterMainController.Instance.modelParent.GetComponentInChildren<Animator>();
@@ -29,7 +31,7 @@ public class ABILITY_Block : EtraAbilityBaseClass
             if(_hasAnimator)
             {
                 _animator.SetBool("Block",_input.block);
-                //_input.healthStatusManager.SetStatus("block",_input.block,"player");
+                _healthStatusManager.SetStatus("block",_input.block,"player");
             }
         }
     }

@@ -15,10 +15,12 @@ public class ABILITY_DownBlock : EtraAbilityBaseClass
         {
             mainController = GetComponentInParent<EtraCharacterMainController>();
             _input = GetComponentInParent<StarterAssetsInputs>();
+            _healthStatusManager = GetComponentInParent<HealthStatusManager>();
             _hasAnimator = EtrasResourceGrabbingFunctions.TryGetComponentInChildren<Animator>(EtraCharacterMainController.Instance.modelParent);
             if (_hasAnimator) {
                 _animator = EtraCharacterMainController.Instance.modelParent.GetComponentInChildren<Animator>();
             }
+            Debug.Log("Entra nell'abilità");
         }
 
         public override void abilityUpdate()
@@ -30,7 +32,7 @@ public class ABILITY_DownBlock : EtraAbilityBaseClass
             if(_hasAnimator)
             {
                 _animator.SetBool("DownBlock",_input.downBlock);
-                //_healthStatusManager.SetStatus("blockDown",_input.block,"player");
+                _healthStatusManager.SetStatus("blockDown",_input.block,"player");
             }
         }
     }

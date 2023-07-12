@@ -13,11 +13,13 @@ public class ABILITY_Throw : EtraAbilityBaseClass
     public GameObject enemy;
     private Vector3 currentRotation, currentEnemyRotation;
     private Quaternion newRotation, newEnemyRotation;
+    private HealthStatusManager _healthStatusManager;
 
     public override void abilityStart()
         {
             mainController = GetComponentInParent<EtraCharacterMainController>();
             _input = GetComponentInParent<StarterAssetsInputs>();
+            _healthStatusManager = GetComponentInParent<HealthStatusManager>();
             _hasAnimator = EtrasResourceGrabbingFunctions.TryGetComponentInChildren<Animator>(EtraCharacterMainController.Instance.modelParent);
             if (_hasAnimator) {
                 _animator = EtraCharacterMainController.Instance.modelParent.GetComponentInChildren<Animator>();
@@ -48,6 +50,7 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                     enemy.transform.position= new Vector3(enemy.transform.position.x-0.87684f,enemy.transform.position.y-0.13948f,enemy.transform.position.z);
                     _animator.SetTrigger("Press");
                     _enemyAnimator.SetTrigger("Throw");
+                    _healthStatusManager.takeDamage(6,"enemy","throw");
                 }
                 _input.throwenemy=false;
             }
