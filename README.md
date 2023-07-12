@@ -11,3 +11,28 @@
   <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/Made%20with-c%23-%23239120.svg?style=plastic&logo=c-sharp&logoColor=%23239120" alt="Made with C#"></a>
   <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Versioned%20with-git-%23F05033.svg?style=plastic&logo=git" alt="Versioned with Git"></a>
 </p>
+Benvenuti nel repository del nostro progetto di sviluppo di un coinvolgente gioco di combattimento! "Cosmic Crisis: Humanity's redemption" è un emozionante titolo in cui gli utenti si immergeranno in una lotta senza tregua contro alieni invasori che minacciano la terra.
+
+Caratteristiche principali del gioco:
+
+ - Combattimento intenso: Sfida gli alieni in emozionanti combattimenti.
+ - Diversità dei personaggi: Possibilità di scelta tra un personaggio di sesso maschile ed uno di sesso femminile.
+ - Grafica accattivante: Goditi una grafica curata che ti farà immergere completamente nell'azione.
+
+Unisciti a noi in questa epica battaglia contro l'invasione aliena e difendi la terra con tutte le tue forze!
+
+## Requisiti del progetto
+Realizzare un fighting game 3D in stile Tekken o simili. Ovviamente non è richiesta la stessa complessità.
+
+Gli elementi che dovranno essere presenti sono:
+- Almeno 2 personaggi (si può usare anche lo stesso personaggio cambiandone la texture):
+  - 1 controllato dall’utente
+  - 1 controllato dal computer
+- Almeno 1 arena
+- Almeno le seguenti mosse di combattimento:
+  - Pugno
+  - Calcio
+  - Difesa
+  - Presa
+
+## Autori
