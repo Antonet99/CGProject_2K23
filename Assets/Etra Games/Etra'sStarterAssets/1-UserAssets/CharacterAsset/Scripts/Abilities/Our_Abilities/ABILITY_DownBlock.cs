@@ -8,6 +8,7 @@ public class ABILITY_DownBlock : EtraAbilityBaseClass
     {
         private Animator _animator;
         private StarterAssetsInputs _input;
+        private HealthStatusManager _healthStatusManager;
         bool _hasAnimator;
 
     public override void abilityStart()
@@ -28,8 +29,8 @@ public class ABILITY_DownBlock : EtraAbilityBaseClass
             }
             if(_hasAnimator)
             {
-                _animator.SetBool("DownBlock",_input.block);
-                //_input.healthStatusManager.SetStatus("block",_input.block,"player");
+                _animator.SetBool("DownBlock",_input.downBlock);
+                //_healthStatusManager.SetStatus("blockDown",_input.block,"player");
             }
         }
     }
