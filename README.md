@@ -36,13 +36,11 @@ Gli elementi che dovranno essere presenti sono:
   - Presa
 
 ## Autori
-<div style="display: flex; justify-content: center;">
-  <div style="text-align: center;">
-    <a href="https://github.com/MargheritaGaleazzi/"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/Picsart_23-07-12_15-44-31-387.png" alt="Margherita Galeazzi" width="100"></a>
-    <a href="https://github.com/Antonet99"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/Picsart_23-07-12_15-45-34-578.png" alt="Antonio Baio" width="100"></a>
-     <a href="https://github.com/S1090231"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/Picsart_23-07-12_15-45-58-530.png" alt="Giada Gatti" width="100"></a>
-  </div>
-</div>
+<p align="center">
+    <a href="https://github.com/MargheritaGaleazzi/"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/galeazzi.png" alt="Margherita Galeazzi" width="200"></a>
+    <a href="https://github.com/Antonet99"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/baio.png" alt="Antonio Baio" width="200"></a>
+    <a href="https://github.com/S1090231"><img src="https://github.com/MargheritaGaleazzi/CGProject_2K23/blob/main/_ReadMeImg/gatti.png" alt="Giada Gatti" width="200"></a>
+</p>
 
 
 
