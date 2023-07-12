@@ -6,9 +6,12 @@ public class HealthStatusManager : MonoBehaviour
 {
     private float playerLife, enemyLife;
     private bool playerBlock, playerBlockDown, enemyBlock, enemyBlockDown;
+    private Animator playerAnimator, enemyAnimator;
     // Start is called before the first frame update
     void Start()
     {
+        playerAnimator=GameObject.Find("DefaultArmatureCharacterModel").GetComponent<Animator>();
+        enemyAnimator=GameObject.Find("Enemy").GetComponent<Animator>();
         playerBlock = false;
         playerBlockDown = false;
         enemyBlock=false;
@@ -21,11 +24,11 @@ public class HealthStatusManager : MonoBehaviour
     {
         if(character=="player")
         {
-            if(attackType=="punch" && playerBlock==true)
-            {
-                playerLife=playerLife-(damage/2);
-            }
-            else if(attackType=="kick" && playerBlockDown==true)
+            bool defendedFromPunch = (attackType=="punch" && playerBlock==true);
+            bool defendedFromKick = (attackType=="kick" && playerBlockDown==true);
+            bool isAlive = playerLife > 0;
+            EndGame(isAlive,enemyAnimator,playerAnimator);
+            if(defendedFromPunch||defendedFromKick)
             {
                 playerLife=playerLife-(damage/2);
             }
@@ -36,7 +39,18 @@ public class HealthStatusManager : MonoBehaviour
         }
         else if(character=="enemy")
         {
-            enemyLife=enemyLife-damage;
+            bool defendedFromPunch = (attackType=="punch" && enemyBlock==true);
+            bool defendedFromKick = (attackType=="kick" && enemyBlockDown==true);
+            bool isAlive = playerLife > 0;
+            EndGame(isAlive,playerAnimator,enemyAnimator);
+            if(defendedFromPunch||defendedFromKick)
+            {
+                enemyLife=enemyLife-(damage/2);
+            }
+            else
+            {
+                enemyLife=enemyLife-damage;
+            }
         }
     }
 
@@ -99,9 +113,13 @@ public class HealthStatusManager : MonoBehaviour
             return false;
         }
     }
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
+
+    public void EndGame(bool isAlive, Animator opponentAnimator, Animator animator)
+    {
+        if(!isAlive)
+            {
+                opponentAnimator.Play("Winning");
+                animator.Play("Dying");
+            }
+    }
 }
