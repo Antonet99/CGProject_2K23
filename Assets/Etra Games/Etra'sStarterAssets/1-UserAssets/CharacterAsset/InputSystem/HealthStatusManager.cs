@@ -41,7 +41,7 @@ public class HealthStatusManager : MonoBehaviour
         {
             bool defendedFromPunch = (attackType=="punch" && enemyBlock==true);
             bool defendedFromKick = (attackType=="kick" && enemyBlockDown==true);
-            bool isAlive = playerLife > 0;
+            bool isAlive = enemyLife > 0;
             EndGame(isAlive,playerAnimator,enemyAnimator);
             if(defendedFromPunch||defendedFromKick)
             {
