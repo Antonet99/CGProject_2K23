@@ -49,6 +49,13 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                     enemy.transform.rotation = newEnemyRotation;
                     enemy.transform.position= new Vector3(enemy.transform.position.x-0.87684f,enemy.transform.position.y-0.13948f,enemy.transform.position.z);
                     _animator.SetTrigger("Press");
+                    foreach (AnimatorControllerParameter param in _enemyAnimator.parameters)
+                    {
+                        if (param.type == AnimatorControllerParameterType.Bool)
+                        {
+                            _enemyAnimator.SetBool(param.name, false);
+                        }
+                    }
                     _enemyAnimator.SetTrigger("Throw");
                     _healthStatusManager.takeDamage(6,"enemy","throw");
                 }
