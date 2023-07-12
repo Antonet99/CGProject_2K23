@@ -20,6 +20,7 @@ namespace Etra.StarterAssets.Input
         public bool punch;
         public bool kick;
         public bool block;
+        public bool downBlock;
         public bool throwenemy;
 
         //aggiunto per gestire la vita e lo status del giocatore
@@ -171,6 +172,11 @@ namespace Etra.StarterAssets.Input
             BlockInput(value.isPressed);
         }
 
+        public void OnDownBlock(InputValue value)
+        {
+            DownBlockInput(value.isPressed);
+        }
+
         public void OnThrow(InputValue value)
         {
             ThrowInput(value.isPressed);
@@ -218,6 +224,16 @@ namespace Etra.StarterAssets.Input
             if(Input.GetButtonUp("Block"))
             {
                 BlockInput(false);
+            }
+
+            if(Input.GetButtonDown("DownBlock"))
+            {
+                DownBlockInput(true);
+            }
+
+            if(Input.GetButtonUp("DownBlock"))
+            {
+                DownBlockInput(false);
             }
 
             if (Input.GetButtonDown("Throw"))
@@ -319,6 +335,11 @@ namespace Etra.StarterAssets.Input
         public void BlockInput(bool newBlockState)
         {
            block= newBlockState;
+        }
+
+        public void DownBlockInput(bool newDownBlockState)
+        {
+           downBlock= newDownBlockState;
         }
 
         public void ThrowInput(bool newThrowState)
