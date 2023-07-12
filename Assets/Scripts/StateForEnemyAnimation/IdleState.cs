@@ -6,14 +6,15 @@ public class IdleState : StateMachineBehaviour
     private Transform attackWayPoint;
     private float distanceRangeMax = 20f;
     private string[] attacks = new string[]{"Punch","Kick"};
+    private int[] attacksDamage = new int[]{2,3};
     private int randomNum;
+    private HealthStatusManager _healthStatusManager;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         attackWayPoint=GameObject.FindGameObjectWithTag("AttackWayPoint").transform;
-        //timer = 0;
-        //randTime = Random.Range(1, 3);
+        _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
         randomNum = Random.Range(0, attacks.Length+2);
     }
 
@@ -29,15 +30,19 @@ public class IdleState : StateMachineBehaviour
         {
             if (randomNum==2)
             {
+                _healthStatusManager.SetStatus("block",true,"enemy");
                 animator.SetBool("Block",true);
             }
             if (randomNum==3)
             {
+                _healthStatusManager.SetStatus("blockDown",true,"enemy");
                 animator.SetBool("DownBlock",true);
             }
-            else{
-            animator.transform.rotation=Quaternion.Euler(0f,269.445f,0f);
-            animator.SetTrigger(attacks[randomNum]);
+            else
+            {
+                animator.transform.rotation=Quaternion.Euler(0f,269.445f,0f);
+                animator.SetTrigger(attacks[randomNum]);
+                _healthStatusManager.takeDamage(attacksDamage[randomNum],"player",attacks[randomNum].ToLower());
             }
         }
     }

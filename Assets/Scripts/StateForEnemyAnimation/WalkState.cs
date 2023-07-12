@@ -7,6 +7,7 @@ public class WalkState : StateMachineBehaviour
 {
     private Transform attackWayPoint,defendWayPoint;
     private NavMeshAgent agent;
+    private HealthStatusManager _healthStatusManager;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,6 +16,7 @@ public class WalkState : StateMachineBehaviour
         attackWayPoint=GameObject.FindGameObjectWithTag("AttackWayPoint").transform;
         defendWayPoint=GameObject.FindGameObjectWithTag("DefendWayPoint").transform;
         agent.speed = 3.5f;
+        //_healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

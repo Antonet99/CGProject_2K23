@@ -5,11 +5,13 @@ using UnityEngine;
 public class DownBlockState : StateMachineBehaviour
 {
     float timer, randTime;
+    private HealthStatusManager _healthStatusManager;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
         randTime = Random.Range(1, 4);
+        _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -18,6 +20,7 @@ public class DownBlockState : StateMachineBehaviour
         timer += Time.deltaTime;
         if (timer>randTime)
         {
+            _healthStatusManager.SetStatus("blockDown",false,"enemy");
             animator.SetBool("DownBlock",false);
         }    
     }
