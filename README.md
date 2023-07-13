@@ -11,7 +11,9 @@
   <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/Made%20with-c%23-%23239120.svg?style=plastic&logo=c-sharp&logoColor=%23239120" alt="Made with C#"></a>
   <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Versioned%20with-git-%23F05033.svg?style=plastic&logo=git" alt="Versioned with Git"></a>
 </p>
-Benvenuti nel repository del nostro progetto di sviluppo di un coinvolgente gioco di combattimento! "Cosmic Crisis: Humanity's redemption" è un emozionante titolo in cui gli utenti si immergeranno in una lotta senza tregua contro alieni invasori che minacciano la terra.
+Benvenuti nel repository del nostro progetto di sviluppo di un coinvolgente gioco di combattimento! 
+
+"Cosmic Crisis: Humanity's redemption" è un emozionante titolo in cui gli utenti si immergeranno in una lotta senza tregua contro alieni invasori che minacciano la terra.
 
 Caratteristiche principali del gioco:
 
