@@ -54,6 +54,16 @@ namespace EtrasStarterAssets
 
         }
 
+        public void PlayPunchSound()
+        {
+            abilitySoundManager.Play("Punch");
+        }
+
+        public void PlayKickSound()
+        {
+            abilitySoundManager.Play("Kick");
+        }
+
 
 
     }

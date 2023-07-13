@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class SfxManager : MonoBehaviour
 {
     AudioSource source;
-    public AudioClip femalepunch, femalekick, femalewinning,femaleyes,malepunch,malekick,malewinning;
+    public AudioClip audioPunch, audioKick, audioWinning,femaleYes;
     float delayTemp=0.4f;
     float delay;
     // Start is called before the first frame update
@@ -15,18 +15,18 @@ public class SfxManager : MonoBehaviour
        source=this.GetComponent<AudioSource>(); 
        delay=delayTemp;
     }
-    public void FemalePunch(){
-        source.clip=femalepunch;
+    public void AudioPunch(){
+        source.clip=audioPunch;
         source.Play();
     }
-    public void FemaleKick(){
-        source.clip=femalekick;
+    public void AudioKick(){
+        source.clip=audioKick;
         source.Play();
         //source.clip=femaleyes;
         //source.Play();
     }
-    public void FemaleWinning(){
-        source.clip=femalewinning;
+    public void AudioWinning(){
+        source.clip=audioWinning;
         source.Play();
     }
 

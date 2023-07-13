@@ -1633,7 +1633,6 @@ GameObject:
   - component: {fileID: 408307860}
   - component: {fileID: 408307859}
   - component: {fileID: 408307858}
-  - component: {fileID: 408307862}
   - component: {fileID: 408307863}
   - component: {fileID: 408307864}
   m_Layer: 7
@@ -1854,18 +1853,6 @@ MonoBehaviour:
   starterAssetCanvas: {fileID: 2052905695}
   etraAbilityManager: {fileID: 388472829}
   etraFPSUsableItemManager: {fileID: 0}
---- !u!114 &408307862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408307856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e523c070ce34e5b4cbbbb55cf037f969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &408307863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10392,6 +10379,26 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ScreenWipe
     clip: {fileID: 8300000, guid: a6f8fde56418abe45b36a9c5d05a3adf, type: 3}
+    volume: 1
+    basePitch: 1
+    spatialBlend: 0
+    randomizePitch: 0
+    randomPitchRange: {x: 0.95, y: 1.05}
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch
+    clip: {fileID: 8300000, guid: b2df2f59f9f69ba459e9e1fb949b77f4, type: 3}
+    volume: 1
+    basePitch: 1
+    spatialBlend: 0
+    randomizePitch: 0
+    randomPitchRange: {x: 0.95, y: 1.05}
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Kick
+    clip: {fileID: 8300000, guid: 7ba8bf44401fe0c48aca4a7710862d92, type: 3}
     volume: 1
     basePitch: 1
     spatialBlend: 0
