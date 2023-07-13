@@ -11,8 +11,8 @@ public class ABILITY_Throw : EtraAbilityBaseClass
     private StarterAssetsInputs _input;
     bool _hasAnimator, _areNear;
     public GameObject enemy;
-    private Vector3 currentRotation, currentEnemyRotation;
-    private Quaternion newRotation, newEnemyRotation;
+    private Vector3 currentRotation;
+    private Quaternion newRotation;
     private HealthStatusManager _healthStatusManager;
 
     public override void abilityStart()
@@ -37,25 +37,8 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                 parentTransform=transform.parent;
                 _areNear=Vector3.Distance(parentTransform.position,enemy.transform.position)<=2f?true:false;
                 
-                Debug.Log(Vector3.Distance(parentTransform.position,enemy.transform.position));
-                Debug.Log(_areNear);
-                if(_areNear){
-                    Debug.Log("presa");
-                    currentRotation = parentTransform.rotation.eulerAngles;
-                    newRotation=Quaternion.Euler(currentRotation.x,currentRotation.y,0);
-                    currentEnemyRotation = enemy.transform.rotation.eulerAngles;
-                    newEnemyRotation=Quaternion.Euler(currentEnemyRotation.x,currentEnemyRotation.y,90);
-                    parentTransform.rotation=newRotation;
-                    enemy.transform.rotation = newEnemyRotation;
-                    enemy.transform.position= new Vector3(enemy.transform.position.x-0.87684f,enemy.transform.position.y-0.13948f,enemy.transform.position.z);
+                if(_areNear && !_healthStatusManager.GetStatus("block","enemy") && !_healthStatusManager.GetStatus("blockDown","enemy")){
                     _animator.SetTrigger("Press");
-                    foreach (AnimatorControllerParameter param in _enemyAnimator.parameters)
-                    {
-                        if (param.type == AnimatorControllerParameterType.Bool)
-                        {
-                            _enemyAnimator.SetBool(param.name, false);
-                        }
-                    }
                     _enemyAnimator.SetTrigger("Throw");
                     _healthStatusManager.takeDamage(6,"enemy","throw");
                     _healthStatusManager.ResizeBar(_healthStatusManager.enemyLife,_healthStatusManager.enemyBarTransform);

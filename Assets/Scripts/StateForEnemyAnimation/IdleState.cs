@@ -59,7 +59,8 @@ public class IdleState : StateMachineBehaviour
     //}
 
     // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //}
+    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        
+    }
 }

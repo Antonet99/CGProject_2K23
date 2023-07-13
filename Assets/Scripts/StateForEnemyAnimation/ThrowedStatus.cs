@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KickState : StateMachineBehaviour
+public class ThrowedStatus : StateMachineBehaviour
 {
-    private HealthStatusManager _healthStatusManager;
-    Transform enemy, player;
+    Transform player;
+    Transform enemy;
+        //private Vector3 currentEnemyRotation;
+        //private Quaternion newRotation, newEnemyRotation;
+        
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
-        _healthStatusManager.takeDamage(3,"player","kick");    
-        _healthStatusManager.ResizeBar(_healthStatusManager.playerLife,_healthStatusManager.playerBarTransform);
         player = GameObject.Find("EtraCharacterAssetBase").GetComponent<Transform>();
         enemy = animator.GetComponentInParent<Transform>();
-        enemy.transform.position = new Vector3(player.position.x+2, player.position.y, player.position.z);
+        //currentEnemyRotation = animator.transform.rotation.eulerAngles;
+        //newEnemyRotation=Quaternion.Euler(currentEnemyRotation.x,currentEnemyRotation.y,90);
+        //animator.transform.rotation = newEnemyRotation;
+        enemy.transform.rotation = Quaternion.Euler(0,95,0);
+        enemy.transform.position = new Vector3(player.position.x, player.position.y-3f, player.position.z);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -36,9 +40,10 @@ public class KickState : StateMachineBehaviour
     //}
 
     // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
+    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
         // Implement code that sets up animation IK (inverse kinematics)
-        //animator.bodyPosition = new Vector3(animator.transform.position.x+5, animator.transform.position.y, animator.transform.position.z);
-    //}
+        //animator.bodyPosition = new Vector3(player.position.x-10, player.position.y-3f, player.position.z);
+        //animator.bodyRotation = Quaternion.Euler(0,185,0);
+    }
 }
