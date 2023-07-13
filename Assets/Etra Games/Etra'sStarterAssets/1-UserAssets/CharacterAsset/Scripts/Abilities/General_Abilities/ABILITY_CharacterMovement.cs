@@ -41,7 +41,7 @@ namespace Etra.StarterAssets.Abilities
         [Header("Enemy Not Crossable")]
         public bool enemyNotCrossable = false;
         public Transform enemy;
-        public float distanceAmong = 2f;
+        public float distanceAmong = 1.5f;
 
         //References
         [HideInInspector] public Vector2 passedMovementInput;
