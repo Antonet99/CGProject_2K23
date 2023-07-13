@@ -38,6 +38,11 @@ namespace Etra.StarterAssets.Abilities
         public bool limitYAxis = false;
         public bool limitZAxis = true;
 
+        [Header("Enemy Not Crossable")]
+        public bool enemyNotCrossable = false;
+        public Transform enemy;
+        public float distanceAmong = 2f;
+
         //References
         [HideInInspector] public Vector2 passedMovementInput;
         private StarterAssetsInputs _input;
@@ -122,7 +127,14 @@ namespace Etra.StarterAssets.Abilities
 
                 // Apply position limits to each axis
                 if (limitXAxis)
-                    currentPosition.x = Mathf.Clamp(currentPosition.x, positionXLimitMin, positionXLimitMax);
+                    if (enemyNotCrossable)
+                    {
+                        currentPosition.x = Mathf.Clamp(currentPosition.x, positionXLimitMin, enemy.position.x-distanceAmong);
+                    }
+                    else
+                    {
+                        currentPosition.x = Mathf.Clamp(currentPosition.x, positionXLimitMin, positionXLimitMax);
+                    }
 
                 if (limitYAxis)
                     currentPosition.y = Mathf.Clamp(currentPosition.y, positionYLimitMin, positionYLimitMax);

@@ -1488,6 +1488,9 @@ MonoBehaviour:
   limitXAxis: 1
   limitYAxis: 0
   limitZAxis: 0
+  enemyNotCrossable: 1
+  enemy: {fileID: 543450652744220657}
+  distanceAmong: 2
   passedMovementInput: {x: 0, y: 0}
   sprintSpeed: 6
   isCrouched: 0
