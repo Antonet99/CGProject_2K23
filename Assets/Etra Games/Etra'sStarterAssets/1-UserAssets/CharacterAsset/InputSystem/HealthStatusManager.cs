@@ -8,7 +8,7 @@ public class HealthStatusManager : MonoBehaviour
     private bool playerBlock, playerBlockDown, enemyBlock, enemyBlockDown;
     private Animator playerAnimator, enemyAnimator;
     public Image playerBar, enemyBar;
-    //[HideInInspector]
+    //+[HideInInspector]
     public float playerLife, enemyLife;
     [HideInInspector]
     public RectTransform playerBarTransform, enemyBarTransform;

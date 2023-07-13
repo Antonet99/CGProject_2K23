@@ -38,6 +38,7 @@ public class ABILITY_Kick : EtraAbilityBaseClass
                 if(_areNear)
                 {
                     _healthStatusManager.takeDamage(3,"enemy","kick");
+                    _healthStatusManager.ResizeBar(_healthStatusManager.enemyLife,_healthStatusManager.enemyBarTransform);
                 }
                 _input.kick=false;
             }

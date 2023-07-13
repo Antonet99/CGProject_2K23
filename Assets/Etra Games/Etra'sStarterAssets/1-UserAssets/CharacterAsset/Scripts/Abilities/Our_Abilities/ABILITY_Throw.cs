@@ -58,6 +58,7 @@ public class ABILITY_Throw : EtraAbilityBaseClass
                     }
                     _enemyAnimator.SetTrigger("Throw");
                     _healthStatusManager.takeDamage(6,"enemy","throw");
+                    _healthStatusManager.ResizeBar(_healthStatusManager.enemyLife,_healthStatusManager.enemyBarTransform);
                 }
                 _input.throwenemy=false;
             }

@@ -10,6 +10,7 @@ public class KickState : StateMachineBehaviour
     {
         _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
         _healthStatusManager.takeDamage(3,"player","kick");    
+        _healthStatusManager.ResizeBar(_healthStatusManager.playerLife,_healthStatusManager.playerBarTransform);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
