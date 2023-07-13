@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthStatusManager : MonoBehaviour
 {
-    private float playerLife, enemyLife;
     private bool playerBlock, playerBlockDown, enemyBlock, enemyBlockDown;
     private Animator playerAnimator, enemyAnimator;
+    public Image playerBar, enemyBar;
+    //[HideInInspector]
+    public float playerLife, enemyLife;
+    [HideInInspector]
+    public RectTransform playerBarTransform, enemyBarTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +23,9 @@ public class HealthStatusManager : MonoBehaviour
         enemyBlock=false;
         enemyBlockDown = false;
         playerLife=100;
-        enemyLife=100;  
+        enemyLife=100;
+        playerBarTransform=playerBar.GetComponent<RectTransform>();
+        enemyBarTransform=enemyBar.GetComponent<RectTransform>();  
     }
 
     public void takeDamage(float damage,string character,string attackType)
@@ -30,12 +38,11 @@ public class HealthStatusManager : MonoBehaviour
             EndGame(isAlive,enemyAnimator,playerAnimator);
             if(defendedFromPunch||defendedFromKick)
             {
-                playerLife=playerLife-(damage/2);
+                damage=damage/2;
             }
-            else
-            {
-                playerLife=playerLife-damage;
-            }
+            playerLife=playerLife-damage;
+            //playerBarTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,playerBarTransform.rect.width-(damage*1.8f));
+            //ResizeBar(playerLife, playerBarTransform);
         }
         else if(character=="enemy")
         {
@@ -45,30 +52,31 @@ public class HealthStatusManager : MonoBehaviour
             EndGame(isAlive,playerAnimator,enemyAnimator);
             if(defendedFromPunch||defendedFromKick)
             {
-                enemyLife=enemyLife-(damage/2);
+                damage = damage/2;
             }
-            else
-            {
-                enemyLife=enemyLife-damage;
-            }
+            enemyLife=enemyLife-damage;
+            //enemyBarTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,enemyBarTransform.rect.width-(damage*1.8f));
+            //ResizeBar(enemyLife,enemyBarTransform);
         }
     }
 
-    public float GetHealth(string character)
+    /*public float GetHealth(string character)
     {
         if(character=="player")
         {
+            ResizeBar(playerLife,playerBarTransform);
             return playerLife;
         }
         else if(character=="enemy")
         {
+            ResizeBar(enemyLife,enemyBarTransform);
             return enemyLife;
         }
         else
         {
             return 0;
         }
-    }
+    }*/
 
     public void SetStatus(string type, bool status,string character)
     {
@@ -121,5 +129,10 @@ public class HealthStatusManager : MonoBehaviour
                 opponentAnimator.Play("Winning");
                 animator.Play("Dying");
             }
+    }
+
+    public void ResizeBar(float life, RectTransform barTransform){
+        float newWidth = 1.8f*life;
+        barTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,newWidth);
     }
 }

@@ -43,6 +43,7 @@ public class ABILITY_Punch : EtraAbilityBaseClass
                 if(_areNear)
                 {
                     _healthStatusManager.takeDamage(2,"enemy","punch");
+                    _healthStatusManager.ResizeBar(_healthStatusManager.enemyLife,_healthStatusManager.enemyBarTransform);
                 }
                 _input.punch=false;
             }

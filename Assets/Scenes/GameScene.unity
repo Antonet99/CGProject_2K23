@@ -1886,6 +1886,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ac60ed0084fc748afa6a057392ec46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBar: {fileID: 961072024}
+  enemyBar: {fileID: 1663171737}
+  playerLife: 0
+  enemyLife: 0
+  playerBarTransform: {fileID: 0}
+  enemyBarTransform: {fileID: 0}
 --- !u!1 &409076749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,9 +4660,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 170, y: -60}
+  m_AnchoredPosition: {x: 80.000015, y: -60}
   m_SizeDelta: {x: 180, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &961072024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8155,9 +8161,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -170, y: -60}
+  m_AnchoredPosition: {x: -80.000015, y: -60}
   m_SizeDelta: {x: 180, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1663171737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9253,7 +9259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
