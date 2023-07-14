@@ -64,7 +64,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: RotateY
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: ae76eaf97e48df64996da52bec370fbf, type: 3}
+        floatParameter: 81
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

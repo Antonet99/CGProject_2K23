@@ -12,7 +12,6 @@ public class ABILITY_Punch : EtraAbilityBaseClass
         public GameObject enemy;
         private Transform parentTransform;
         private HealthStatusManager _healthStatusManager;
-        //private Animator _enemyAnimator;
 
     public override void abilityStart()
         {
@@ -22,7 +21,6 @@ public class ABILITY_Punch : EtraAbilityBaseClass
             _hasAnimator = EtrasResourceGrabbingFunctions.TryGetComponentInChildren<Animator>(EtraCharacterMainController.Instance.modelParent);
             if (_hasAnimator) {
                 _animator = EtraCharacterMainController.Instance.modelParent.GetComponentInChildren<Animator>();
-                //_enemyAnimator = enemy.GetComponentInChildren<Animator>();
             }
         }
 
@@ -39,7 +37,6 @@ public class ABILITY_Punch : EtraAbilityBaseClass
                 _areNear=(parentTransform.position.x-enemy.transform.position.x)<=1.2f?true:false;
                 if(_areNear)
                 {
-                    //_enemyAnimator.Play("Hitted");
                     _healthStatusManager.takeDamage(2,"enemy","punch");
                     _healthStatusManager.ResizeBar(_healthStatusManager.enemyLife,_healthStatusManager.enemyBarTransform);
                 }

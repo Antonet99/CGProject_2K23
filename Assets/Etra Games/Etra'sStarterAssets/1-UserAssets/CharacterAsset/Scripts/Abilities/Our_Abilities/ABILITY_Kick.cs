@@ -30,11 +30,13 @@ public class ABILITY_Kick : EtraAbilityBaseClass
                 _input.kick = false;
                 return;
             }
+            
+            parentTransform=transform.parent;
+            float distance = Mathf.Abs(parentTransform.position.x-enemy.transform.position.x);
             if (_hasAnimator && _input.kick==true){
                 Debug.Log("calcio");
                 _animator.SetTrigger("Kick");
-                 parentTransform=transform.parent;
-                _areNear=(parentTransform.position.x-enemy.transform.position.x)<=1.2f?true:false;
+                _areNear=(distance>=2f && distance<=2.5f)?true:false;
                 if(_areNear)
                 {
                     _healthStatusManager.takeDamage(3,"enemy","kick");
