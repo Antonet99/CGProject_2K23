@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3df7f9ba-e567-470e-af5e-dcf05670e288" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CGProject_2K23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CGProject_2K23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Etra Games/Etra'sStarterAssets/1-UserAssets/CharacterAsset/InputSystem/HealthStatusManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Etra Games/Etra'sStarterAssets/1-UserAssets/CharacterAsset/InputSystem/HealthStatusManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +99,7 @@
       <workItem from="1686924291011" duration="214000" />
       <workItem from="1689324502286" duration="147000" />
       <workItem from="1689326221139" duration="288000" />
+      <workItem from="1689329580795" duration="169000" />
     </task>
     <servers />
   </component>
