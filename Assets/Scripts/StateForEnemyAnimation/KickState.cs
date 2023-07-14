@@ -10,7 +10,7 @@ public class KickState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
-        _healthStatusManager.takeDamage(3,"player","kick");    
+        _healthStatusManager.takeDamage(5,"player","kick");    
         _healthStatusManager.ResizeBar(_healthStatusManager.playerLife,_healthStatusManager.playerBarTransform);
         player = GameObject.Find("EtraCharacterAssetBase").GetComponent<Transform>();
         enemy = animator.GetComponentInParent<Transform>();

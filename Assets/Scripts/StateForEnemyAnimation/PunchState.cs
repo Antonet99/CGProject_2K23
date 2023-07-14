@@ -9,7 +9,7 @@ public class PunchState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
-        _healthStatusManager.takeDamage(2,"player","punch");
+        _healthStatusManager.takeDamage(4,"player","punch");
         _healthStatusManager.ResizeBar(_healthStatusManager.playerLife,_healthStatusManager.playerBarTransform);
     }
 
