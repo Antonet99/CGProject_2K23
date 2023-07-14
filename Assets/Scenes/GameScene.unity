@@ -1454,7 +1454,7 @@ MonoBehaviour:
   abilityEnabled: 1
   JumpHeight: 1.2
   JumpTimeout: 0.05
-  jumpShakeEnabled: 1
+  jumpShakeEnabled: 0
   jumpingShake: {x: 1, y: 0.1}
   lockJump: 0
 --- !u!114 &388472827
