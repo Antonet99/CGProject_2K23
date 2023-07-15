@@ -1697,7 +1697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &667875298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2707,8 +2707,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62f758da2dac4a440bd58b9f1ff19a78, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b11ccf10c9e07ba468a4f3d916139bfe, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5745,13 +5745,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cf54fe9509bb84eb14d7b6a637be8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  femalepunch: {fileID: 8300000, guid: b2df2f59f9f69ba459e9e1fb949b77f4, type: 3}
-  femalekick: {fileID: 8300000, guid: 7ba8bf44401fe0c48aca4a7710862d92, type: 3}
-  femalewinning: {fileID: 8300000, guid: 4a5b28c5ca1db8146bb10b8a3e8219b8, type: 3}
-  femaleyes: {fileID: 8300000, guid: a0a80945d91f33b46bccc2ff8187ee12, type: 3}
-  malepunch: {fileID: 0}
-  malekick: {fileID: 0}
-  malewinning: {fileID: 0}
+  audioPunch: {fileID: 0}
+  audioKick: {fileID: 0}
+  audioWinning: {fileID: 0}
+  femaleYes: {fileID: 0}
 --- !u!1 &2123162658
 GameObject:
   m_ObjectHideFlags: 0
