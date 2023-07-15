@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 60;
+    public float timeValue = 180;
     public Text timeText;
+    //private HealthStatusManager _healthStatusManager;
+    private AdjustAnimation _ending;
+
+    //void Start()
+    //{
+        //_healthStatusManager=GameObject.Find("EtraCharacterAssetBase").GetComponent<HealthStatusManager>();
+    //}
     
     // Update is called once per frame
     void Update()
@@ -28,6 +35,16 @@ public class Timer : MonoBehaviour
         if(timeToDisplay < 0)
         {
             timeToDisplay = 0; 
+            _ending.ChangeScene();
+            /*if (_healthStatusManager.playerLife >= _healthStatusManager.enemyLife)
+            {
+                _ending.Win();
+
+            }
+            else if (_healthStatusManager.playerLife < _healthStatusManager.enemyLife)
+            {
+                _ending.Die();
+            }*/
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);

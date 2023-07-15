@@ -36,7 +36,7 @@ public class ABILITY_Kick : EtraAbilityBaseClass
             if (_hasAnimator && _input.kick==true){
                 Debug.Log("calcio");
                 _animator.SetTrigger("Kick");
-                _areNear=(distance>=2f && distance<=2.5f)?true:false;
+                _areNear=(distance<=2.5f)?true:false;
                 if(_areNear)
                 {
                     _healthStatusManager.takeDamage(3,"enemy","kick");
