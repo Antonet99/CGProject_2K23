@@ -17,13 +17,25 @@ public class MusicPersistency : MonoBehaviour
         {
             mixer.SetFloat("MasterVol",PlayerPrefs.GetFloat("MasterVol"));
         }
+        else
+        {
+            mixer.SetFloat("MasterVol",80);
+        }
         if(PlayerPrefs.HasKey("MusicVol"))
         {
             mixer.SetFloat("MusicVol",PlayerPrefs.GetFloat("MusicVol"));
         }
+        else
+        {
+            mixer.SetFloat("MusicVol",80);
+        }
         if(PlayerPrefs.HasKey("SFXVol"))
         {
             mixer.SetFloat("SFXVol",PlayerPrefs.GetFloat("SFXVol"));
+        }
+        else
+        {
+            mixer.SetFloat("SFXVol",80);
         }
         DontDestroyOnLoad(gameObject);
     }
